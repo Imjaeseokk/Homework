@@ -9,37 +9,64 @@
         <span id = 'output'>
             0</span>
         <br>
-        <button id = seven, class = number>7</button>
-        <button id = eight, class = number>8</button>
-        <button id = nine, class = number>9</button>
+        <span id = "test">test</span>
         <br>
-        <button id = four, class = number>4</button>
-        <button id = five, class = number>5</button>
-        <button id = six, class = number>6</button>
+        <button id = "seven" class = "number">7</button>
+        <button id = "eight" class = "number">8</button>
+        <button id = "nine" class = "number">9</button>
+        <button id = "time" class = "operator">*</button>
         <br>
-        <button id = one, class = number>1</button>
-        <button id = two, class = number>2</button>
-        <button id = three, class = number>3</button>
+        <button id = "four" class = "number">4</button>
+        <button id = "five" class = "number">5</button>
+        <button id = "six" class = "number">6</button>
+        <button id = "divide" class = "operator">/</button>
         <br>
-        <button id = sign class = operator>+/-</button>
-        <button id = zero, class = number>0</button>
-        <button id = point class = operator>.</button>
+        <button id = "one" class = "number">1</button>
+        <button id = "two" class = "number">2</button>
+        <button id = "three" class = "number">3</button>
+        <button id = "clear" class = "function">C</button>
+        <br>
+        <button id = "plus" class = "operator">+</button>
+        <button id = "zero" class = "number">0</button>
+        <button id = "minus" class = "operator">-</button>
 
 
         <script>
             // 내일 수정 필요
             var formula = "0";
             var btnElements = document.getElementsByClassName('number');
+            var operElements = document.getElementsByClassName('operator');
+
+
+            document.getElementById('clear').addEventListener('click',function(){
+                document.getElementById('output').innerHTML = 0;
+            });
 
             for (var i=0 ; i < btnElements.length; i++)
             {
                 btnElements[i].addEventListener('click',function(){
                     var currentFormula = document.getElementById('output').innerHTML;
                     var addFormula = this.innerHTML;
+
+                    //document.getElementById('test').innerHTML = addFormula;
+
+                    if (currentFormula == 0){
+                        document.getElementById('output').innerHTML = addFormula;
+                    }else{
                     document.getElementById('output').innerHTML = currentFormula + addFormula;
+                    }
                 })
             };
 
+            for (var j=0 ; j < operElements.length; j++)
+            {
+                
+                operElements[j].addEventListener('click',function(){
+                    currentFormula = document.getElementById('output').innerHTML;
+                    var addOperator = this.innerHTML;
+                    document.getElementById('output').innerHTML = currentFormula + addOperator;
+                })
+            };
 
         </script>
     </body>
