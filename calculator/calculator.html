@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <h1>This is my Calculator</h1>
+        <link rel="stylesheet" href = "calculator.css">
+
+
+    </head>
+    <body>
+        <span id = 'output'>
+            0</span>
+        <br>
+        <button id = seven, class = number>7</button>
+        <button id = eight, class = number>8</button>
+        <button id = nine, class = number>9</button>
+        <br>
+        <button id = four, class = number>4</button>
+        <button id = five, class = number>5</button>
+        <button id = six, class = number>6</button>
+        <br>
+        <button id = one, class = number>1</button>
+        <button id = two, class = number>2</button>
+        <button id = three, class = number>3</button>
+        <br>
+        <button id = sign class = operator>+/-</button>
+        <button id = zero, class = number>0</button>
+        <button id = point class = operator>.</button>
+
+
+        <script>
+            // 내일 수정 필요
+            var formula = "0";
+            var btnElements = document.getElementsByClassName('number');
+
+            for (var i=0 ; i < btnElements.length; i++)
+            {
+                btnElements[i].addEventListener('click',function(){
+                    var currentFormula = document.getElementById('output').innerHTML;
+                    var addFormula = this.innerHTML;
+                    document.getElementById('output').innerHTML = currentFormula + addFormula;
+                })
+            };
+
+
+        </script>
+    </body>
+</html>
