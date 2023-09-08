@@ -11,15 +11,19 @@
         <br>
         <span id = "test">test</span>
         <br>
+        <span id = "finalFormula">final formula: </span>
+        <br>
         <button id = "seven" class = "number">7</button>
         <button id = "eight" class = "number">8</button>
         <button id = "nine" class = "number">9</button>
         <button id = "time" class = "operator">*</button>
+        <button id = "parentheses" class = "operator">&#40;</button>
         <br>
         <button id = "four" class = "number">4</button>
         <button id = "five" class = "number">5</button>
         <button id = "six" class = "number">6</button>
         <button id = "divide" class = "operator">/</button>
+        <button id = "parentheses" class = "operator">&#41;</button>
         <br>
         <button id = "one" class = "number">1</button>
         <button id = "two" class = "number">2</button>
@@ -29,10 +33,10 @@
         <button id = "plus" class = "operator">+</button>
         <button id = "zero" class = "number">0</button>
         <button id = "minus" class = "operator">-</button>
+        <button id = "enter" class = "enter">=</button>
 
 
         <script>
-            // 내일 수정 필요
             var formula = "0";
             var btnElements = document.getElementsByClassName('number');
             var operElements = document.getElementsByClassName('operator');
@@ -68,6 +72,15 @@
                 })
             };
 
+            document.getElementById('enter').addEventListener('click',function(){
+                var finalFormula = document.getElementById('output').innerHTML;
+                document.getElementById("finalFormula").innerHTML += finalFormula; 
+            })
+            // 최종 계산식이 유효한지 확인하는 함수 필요
+            // 유효하면 스택계산기 작성
+            // 스택계산기 한 번 더 찾아보기
+
+            
         </script>
     </body>
 </html>
