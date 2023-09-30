@@ -22,7 +22,7 @@ for s in formular:
 postfix.append(int(number))
 while stack:
     postfix.append(stack.pop())
-print(postfix)
+
 
 calStack = []
 for c in postfix:
@@ -39,4 +39,4 @@ for c in postfix:
     else:
         calStack.append(c)
 
-print(calStack)
+print(*calStack)
