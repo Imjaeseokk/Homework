@@ -7,9 +7,7 @@ cards = sorted([i for i in range(1,11)]*2)
 isUserTurn = random.getrandbits(1)
 userChip = 40
 comChip = 40
-
-
-print(cards)
+# print(cards)
 
 def getCard(): # card draw
     # number = random.randint(1,13)
@@ -69,7 +67,10 @@ while i < 10:
     if status == "Bet":
         print("betting된 상황입니다")
         print("User's Chip:", userChip, "Computer's Chip:", comChip, "Bet: ", betChip)
-
+        if isUserTurn:      # user가 bet 했으니까 computer가 action
+            pass
+        else:               # computer가 bet 했으니까 user가 action
+            print("")
         # 이후에 상대방이 포기/콜/레이즈 하는지 확인
     elif status == "Fold":
         #해당 턴이 종료됨
@@ -87,4 +88,4 @@ while i < 10:
     # cycle
     isUserTurn = not isUserTurn
     i += 1
-    print("is Users Turn?",isUserTurn)
+    # print("is Users Turn?",isUserTurn)
