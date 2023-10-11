@@ -2,7 +2,6 @@ def inputFormular():
     formular = input("Enter your formular: ")
     return formular
 
-
 def convertToPostfix(formular,oper):
     number = ""
     postfix = []
