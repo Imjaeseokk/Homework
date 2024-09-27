@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">    
+<head>
+    <meta charset = "UTF-8">
+    <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+    <title>WTFPython</title>
+    <script src = "script.js" defer></script>
+
+</head>
+
+<body>
+    <h3>Question!</h3>
+    <div id="quiz-container">
+        <p id="question"></p>
+        <div id="options"></div>
+    </div>
+    <br>
+    <div>current Quiz Number: <span id="currentQuizNumber">0</span></div>
+    <div>current Correct Answer: <span id="currentAnswerCount">0</span></div>
+    <!-- span은 한 줄에 -->
+    <button id="restartButton" onclick="restartQuiz()">Restart</button>
+</body>
+</html>
