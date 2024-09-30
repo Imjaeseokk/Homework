@@ -1,11 +1,11 @@
 const quizData = [
     {
-        question: "a = 'wtf'\nb = 'wtf'\na is b -> ?",
+        question: ">>> a = 'wtf'\n>>> b = 'wtf'\n>>> a is b -> ?",
         options: ["True","False"],
         correctAnswer: 0
     },
     {
-        question: "a = 'wtf!'\nb = 'wtf!'\na is b -> ?",
+        question: ">>> a = 'wtf!'\n>>> b = 'wtf!'\n>>> a is b -> ?",
         options: ["True","False"],
         correctAnswer: 1
     }
