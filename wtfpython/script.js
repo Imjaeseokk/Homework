@@ -1,11 +1,23 @@
 const quizData = [
     {
-        question: ">>> a = 'wtf'\n>>> b = 'wtf'\n>>> a is b -> ?",
+        question: ">>> a = 'wtf'\n>>> b = 'wtf'\n>>> a is b",
         options: ["True","False"],
         correctAnswer: 0
     },
     {
-        question: ">>> a = 'wtf!'\n>>> b = 'wtf!'\n>>> a is b -> ?",
+        question: ">>> a = 'wtf!'\n>>> b = 'wtf!'\n>>> a is b",
+        options: ["True","False"],
+        correctAnswer: 1
+    },
+    {
+        question: ">>> (False == False) in [False]\nFalse\n>>> False == (False in [False])\nFalse\n>>> False == False in [False]",
+        options: ["True","False"],
+        correctAnswer: 0
+    },
+    {
+        question: `>>> 1 > 0 < 1
+                True
+                >>> (1 > 0) < 1`,
         options: ["True","False"],
         correctAnswer: 1
     }
@@ -49,7 +61,7 @@ function checkAnswer(selectedIndex){
     if (currentQuestion < quizData.length){
         loadQuestion();
     } else {
-        alert('The quiz is end');
+        alert('The quiz is end. Press "Restart" to restart!');
     }
 
 }
