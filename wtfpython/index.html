@@ -5,19 +5,25 @@
     <meta name="viewport" content = "width=device-width, initial-scale=1.0">
     <title>WTFPython</title>
     <script src = "script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
-    <h3>Question!</h3>
+    <h3>What the f*ck Python Quiz</h3>
+    <img id="wtfp_logo" src="logo.png" width="400" height ="300">
     <div id="quiz-container">
         <p id="question"></p>
-        <div id="options"></div>
     </div>
+    <div id="options"></div>
     <br>
-    <div>current Quiz Number: <span id="currentQuizNumber">0</span></div>
-    <div>current Correct Answer: <span id="currentAnswerCount">0</span></div>
+    <div>Quiz Number: <span id="currentQuizNumber">0</span></div>
+    <div>Correct Answer: <span id="currentAnswerCount">0</span></div>
     <!-- span은 한 줄에 -->
     <button id="restartButton" onclick="restartQuiz()">Restart</button>
+    <br>
+    <a href="https://github.com/satwikkansal/wtfpython" target ="_blank">Based on the WTFPython</a>
 </body>
 </html>
